@@ -1,0 +1,5 @@
+Class B1 (Secretin): 
+	not miRNA targets: 
+		vipr2 ghrhr crfr1 gipr glr sctr
+	miRNA targets:
+		vipr1 crfr2 glp1r calrl calcr glp2r pth2r pacr pth1r
