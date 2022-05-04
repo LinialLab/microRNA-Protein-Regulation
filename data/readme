@@ -1,1 +1,2 @@
 Data files
+Includes data used for model training and evaluation, as well as predicted miRNA genes for additional organisms (in `candidates` folder)
