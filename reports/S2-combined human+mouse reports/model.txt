@@ -1,0 +1,124 @@
+XGBClassifier(base_score=0.5, booster=None, colsample_bylevel=1,
+              colsample_bynode=1, colsample_bytree=1, gamma=0, gpu_id=-1,
+              importance_type='gain', interaction_constraints=None,
+              learning_rate=0.1, max_delta_step=0, max_depth=5,
+              min_child_weight=1, missing=nan, monotone_constraints=None,
+              n_estimators=500, n_jobs=0, num_parallel_tree=1, random_state=0,
+              reg_alpha=0, reg_lambda=1, scale_pos_weight=1, seed=0,
+              subsample=1, tree_method=None, validate_parameters=False,
+              verbosity=None)
+index | feature                                                                                             | total gain | count | mean gain 
+---------------------------------------------------------------------------------------------------------------------------------------------
+0     | getFirstOrDefault(3_utr_parsedFeats.csv.gz_Gene_start_bp_by_Gene_name, Gene names  (primary ))      |  19411.30  |  99   |  196.07   
+1     | weightedAverageOf3MostSimilar(human_gene_mirtar_targets.csv.gz_text_index_of_Protein families_with_attributes, Protein families).valueOf(bool_mir_target) orIfMissing 0.0|  9011.93   |  203  |   44.39   
+2     | weightedAverageOf3MostSimilar(human_gene_mirtar_targets.csv.gz_text_index_of_Protein families_with_attributes, Protein families) contains (\"bool_mir_target\", 0.0)|  2027.67   |  62   |   32.70   
+3     | |wordFrequencies(Features).valueOf(modified) orIfMissing 0.0 - 0.12|                                |  1933.24   |  65   |   29.74   
+4     | numberOfChars(Features)                                                                             |  1761.79   |  59   |   29.86   
+5     | weightedAverageOf3MostSimilar(human_gene_mirtar_targets.csv.gz_text_index_of_Protein families_with_attributes, Protein names).valueOf(bool_mir_target) orIfMissing 0.67|  1587.94   |  82   |   19.37   
+6     | weightedAverageOf3MostSimilar(human_gene_mirtar_targets.csv.gz_text_index_of_Protein families_with_attributes, Protein families) contains (\"bool_mir_target\", 9.858841107511842E-6)|  1483.94   |  37   |   40.11   
+7     | numberOfChars(Gene ontology (GO))                                                                   |  1463.95   |  87   |   16.83   
+8     | Features contains \"variant\"                                                                       |  1141.91   |  30   |   38.06   
+9     | normalizedHistogram(Sequence).valueOf(L) orIfMissing 0.0                                            |  1040.58   |  133  |   7.82    
+10    | |wordFrequencies(Features).valueOf(variant) orIfMissing 0.0 - 0.15|                                 |   981.28   |  36   |   27.26   
+11    | numberOfWords(Features)                                                                             |   900.11   |  33   |   27.28   
+12    | elementCount(Sequence).valueOf(\"E\") orIfMissing 0.0                                               |   812.65   |  86   |   9.45    
+13    | max(numbers(Gene ontology (GO)))                                                                    |   801.19   |  98   |   8.18    
+14    | sum(numbers(Gene ontology (GO)))                                                                    |   707.02   |  72   |   9.82    
+15    | Mass                                                                                                |   647.74   |  78   |   8.30    
+16    | |normalizedHistogram(Sequence).valueOf(W) orIfMissing 0.0 - 0.79|                                   |   627.14   |  108  |   5.81    
+17    | max(getOrEmpty(3_utr_parsedFeats.csv.gz_tot_3utr_len_by_Gene_name, Gene names  (primary )))         |   626.36   |  33   |   18.98   
+18    | averageInt(getOrEmpty(3_utr_parsedFeats.csv.gz_3_UTR_1_len_by_Gene_name, Gene names  (primary )))   |   625.16   |  43   |   14.54   
+19    | Keywords contains \"structure\"                                                                     |   606.00   |  14   |   43.29   
+20    | min(numbersUSFormat(Gene ontology (GO)))                                                            |   533.64   |  73   |   7.31    
+21    | |wordFrequencies(Gene ontology (GO)).valueOf(activity) orIfMissing 0.0 - 0.0739|                    |   533.29   |  78   |   6.84    
+22    | elementCount(Sequence).valueOf(\"K\") orIfMissing 0.0                                               |   499.79   |  65   |   7.69    
+23    | wordFrequencies(Gene ontology (GO)).valueOf(go) orIfMissing 0.0                                     |   497.54   |  90   |   5.53    
+24    | elementCount(Sequence).valueOf(\"D\") orIfMissing 0.0                                               |   469.07   |  71   |   6.61    
+25    | numberOfChars(Keywords)                                                                             |   454.82   |  77   |   5.91    
+26    | Length                                                                                              |   446.03   |  52   |   8.58    
+27    | wordFrequencies(Features).valueOf(peptide) orIfMissing 0.0                                          |   376.15   |  31   |   12.13   
+28    | |wordFrequencies(Keywords).valueOf(phosphoprotein) orIfMissing 0.0 - 0.19|                          |   370.91   |  27   |   13.74   
+29    | |numericPairs(Gene ontology (GO)).valueOf(\"(membrane)\") orIfMissing 16,021 - 14,755.75|           |   366.32   |  44   |   8.33    
+30    | |weightedAverageOf3MostSimilar(human_gene_mirtar_targets.csv.gz_text_index_of_Protein families_with_attributes, Keywords).valueOf(Mass) orIfMissing 61,314.59 - 65,766.61||   359.85   |  53   |   6.79    
+31    | wordFrequencies(Features).valueOf(region) orIfMissing 0.0                                           |   358.47   |  61   |   5.88    
+32    | wordCounts(Gene ontology (GO)).valueOf(\"membrane\") orIfMissing 0.0                                |   353.94   |  39   |   9.08    
+33    | wordFrequencies(Features).valueOf(disulfide) orIfMissing 0.0                                        |   353.89   |  30   |   11.80   
+34    | Gene ontology (GO) contains \"0005654\"                                                             |   352.71   |  17   |   20.75   
+35    | |weightedAverageOf3MostSimilar(human_gene_mirtar_targets.csv.gz_text_index_of_Protein families_with_attributes, Features).valueOf(Mass) orIfMissing 0.0 - 57,928.22||   350.73   |  60   |   5.85    
+36    | sum(numbers(Features))                                                                              |   334.89   |  50   |   6.70    
+37    | wordCounts(Gene ontology (GO)).valueOf(\"binding\") orIfMissing 0.0                                 |   316.02   |  21   |   15.05   
+38    | |wordFrequencies(Features).valueOf(alternative) orIfMissing 0.0 - 0.13|                             |   307.55   |  35   |   8.79    
+39    | wordFrequencies(Gene ontology (GO)).valueOf(receptor) orIfMissing 0.0                               |   273.01   |  38   |   7.18    
+40    | |weightedAverageOf3MostSimilar(human_gene_mirtar_targets.csv.gz_text_index_of_Protein families_with_attributes, Features).valueOf(Length) orIfMissing 0.0 - 512.29||   254.87   |  37   |   6.89    
+41    | wordCounts(Protein names).valueOf(\"protein\") orIfMissing 0.0                                      |   250.08   |  24   |   10.42   
+42    | wordFrequencies(Keywords).valueOf(reference) orIfMissing 0.0                                        |   248.78   |  37   |   6.72    
+43    | |wordFrequencies(Keywords).valueOf(nucleus) orIfMissing 0.0 - 0.15|                                 |   242.61   |  25   |   9.70    
+44    | Features does not contain \"modified\"                                                              |   232.78   |  14   |   16.63   
+45    | max(getOrEmpty(3_utr_parsedFeats.csv.gz_3_utr_len_by_Gene_name, Gene names  (primary )))            |   225.42   |  28   |   8.05    
+46    | |weightedAverageOf3MostSimilar(human_gene_mirtar_targets.csv.gz_text_index_of_Protein families_with_attributes, Keywords).valueOf(bool_mir_target) orIfMissing 0.67 - 0.33||   223.26   |  28   |   7.97    
+47    | wordCounts(Gene ontology (GO)).valueOf(\"go\") orIfMissing 0.0                                      |   213.53   |  31   |   6.89    
+48    | Tissue specificity contains \"specificity: testis\"                                                 |   213.44   |  15   |   14.23   
+49    | |wordFrequencies(Keywords).valueOf(cytoplasm) orIfMissing 0.0 - 0.14|                               |   208.57   |  38   |   5.49    
+50    | slidingSubsets(Keywords) contains (\"acetylation\", \"alternative\")                                |   207.61   |  12   |   17.30   
+51    | Tissue specificity contains \"placenta\"                                                            |   199.79   |  16   |   12.49   
+52    | numberOfWords(Involvement in disease)                                                               |   192.94   |  19   |   10.15   
+53    | wordFrequencies(Keywords).valueOf(signal) orIfMissing 0.0                                           |   190.00   |  22   |   8.64    
+54    | wordCounts(Gene ontology (GO)).valueOf(\"protein\") orIfMissing 0.0                                 |   185.96   |  24   |   7.75    
+55    | Gene ontology (GO) contains \"0016020\"                                                             |   180.43   |  10   |   18.04   
+56    | wordFrequencies(Gene ontology (GO)).valueOf(0005615) orIfMissing 0.0                                |   172.49   |  26   |   6.63    
+57    | |wordFrequencies(Keywords).valueOf(splicing) orIfMissing 0.0 - 0.2|                                 |   162.64   |  30   |   5.42    
+58    | |wordFrequencies(Features).valueOf(mutagenesis) orIfMissing 0.0 - 0.12|                             |   162.01   |  21   |   7.71    
+59    | Gene ontology (GO) contains \"rna\"                                                                 |   155.91   |  14   |   11.14   
+60    | Features contains \"initiation\"                                                                    |   150.10   |   7   |   21.44   
+61    | Features contains \"terminal\"                                                                      |   149.47   |  13   |   11.50   
+62    | slidingSubsets(Gene ontology (GO)) contains (\"go\", \"regulation\", \"of\")                        |   148.90   |   7   |   21.27   
+63    | Involvement in disease contains \"disease is\"                                                      |   136.37   |   6   |   22.73   
+64    | numericPairs(Features).valueOf(\"(natural)\") orIfMissing 2                                         |   129.17   |  18   |   7.18    
+65    | Gene ontology (GO) contains \"0000785\"                                                             |   128.10   |  10   |   12.81   
+66    | numericPairs(Features).valueOf(\"(chain)\") orIfMissing 1                                           |   126.34   |  24   |   5.26    
+67    | numericPairs(Features).valueOf(\"(modified)\") orIfMissing 1                                        |   120.87   |  23   |   5.26    
+68    | Features contains \"(1)\"                                                                           |   106.46   |  14   |   7.60    
+69    | Tissue specificity contains \"specificity: ubiquitous\"                                             |   98.62    |  10   |   9.86    
+70    | |wordFrequencies(Features).valueOf(initiation) orIfMissing 0.0 - 0.12|                              |   95.65    |  18   |   5.31    
+71    | average(getOrEmpty(3_utr_parsedFeats.csv.gz_tot_3utr_len_by_Gene_name, Gene names  (primary )))     |   93.17    |  15   |   6.21    
+72    | stemmedWordsWithoutCommonTerms(Features) contains \"initi\"                                         |   86.88    |  13   |   6.68    
+73    | Gene ontology (GO) does not contain \"regulation\"                                                  |   77.73    |   5   |   15.55   
+74    | Gene ontology (GO) contains \"protein\"                                                             |   72.99    |   4   |   18.25   
+75    | skipgrams(Gene ontology (GO)) contains (\"granule\", \"*\", \"go\")                                 |   68.28    |   8   |   8.53    
+76    | Gene ontology (GO) contains \"factor\"                                                              |   67.93    |  10   |   6.79    
+77    | wordFrequencies(Features).valueOf(glycosylation) orIfMissing 0.0                                    |   62.89    |  12   |   5.24    
+78    | slidingSubsets(Gene ontology (GO)) contains (\"go\", \"transcription\")                             |   62.84    |   8   |   7.86    
+79    | Gene ontology (GO) contains \"0005925\"                                                             |   59.45    |   8   |   7.43    
+80    | Gene ontology (GO) contains \"signal\"                                                              |   48.88    |   6   |   8.15    
+81    | Keywords contains \"host\"                                                                          |   45.55    |   7   |   6.51    
+82    | Keywords contains \"ubl\"                                                                           |   44.50    |   6   |   7.42    
+83    | Gene ontology (GO) contains \"0005829\"                                                             |   37.68    |   6   |   6.28    
+84    | slidingSubsets(Keywords) contains (\"structure\", \"alternative\")                                  |   34.10    |   3   |   11.37   
+85    | Features contains \"(3).\"                                                                          |   33.83    |   8   |   4.23    
+86    | Tissue specificity contains \"widely expressed\"                                                    |   33.40    |   5   |   6.68    
+87    | Features contains \"5\"                                                                             |   31.45    |   7   |   4.49    
+88    | skipgramsAndBiGrams(Features) contains (\"1\", \"1\")                                               |   30.99    |   3   |   10.33   
+89    | extractKeys(numericPairs(Keywords)) contains (\"acetylation.\")                                     |   30.03    |   5   |   6.01    
+90    | Features does not contain \"2\"                                                                     |   28.95    |   7   |   4.14    
+91    | Tissue specificity contains \"skeletal muscle\"                                                     |   27.95    |   4   |   6.99    
+92    | Keywords == \"Cell membrane. Disulfide bond. G-protein coupled receptor. Glycoprotein. Membrane. Olfaction. Receptor. Reference proteome. Sensory transduction. Transducer. Transmembrane. Transmembrane helix\"|   20.57    |   4   |   5.14    
+93    | slidingSubsets(Features) contains (\"erroneous\", \"helix\")                                        |   20.26    |   2   |   10.13   
+94    | slidingSubsets(Features) contains (\"helix\", \"residue\")                                          |   19.92    |   3   |   6.64    
+95    | Features contains \"(4).\"                                                                          |   19.62    |   6   |   3.27    
+96    | Gene ontology (GO) does not contain \"binding\"                                                     |   18.98    |   3   |   6.33    
+97    | Keywords contains \"acetylation. alternative\"                                                      |   15.21    |   3   |   5.07    
+98    | |wordFrequencies(Keywords).valueOf(isopeptide) orIfMissing 0.0 - 0.16|                              |   13.47    |   2   |   6.74    
+99    | Features contains \"mutagenesis\"                                                                   |   13.45    |   5   |   2.69    
+100   | skipgramsAndBiGrams(Keywords) contains (\"alternative\", \"splicing\")                              |   10.87    |   2   |   5.43    
+101   | slidingSubsets(Features) contains (\"residue\", \"1\")                                              |   10.37    |   3   |   3.46    
+102   | Features contains \"alternative\"                                                                   |    9.87    |   2   |   4.94    
+103   | Post-translational modification contains \"0000269\"                                                |    9.37    |   1   |   9.37    
+104   | Features contains \"6).\"                                                                           |    8.16    |   2   |   4.08    
+105   | slidingSubsets(Features) contains (\"1\", \"natural\")                                              |    5.20    |   1   |   5.20    
+106   | slidingSubsets(Features) contains (\"residue\", \"natural\", \"variant\")                           |    4.64    |   1   |   4.64    
+107   | slidingSubsets(Features) contains (\"mutagenesis\", \"natural\")                                    |    4.01    |   1   |   4.01    
+108   | slidingSubsets(Features) contains (\"alternative\", \"sequence\", \"beta\")                         |    0.00    |   0   |   0.00    
+109   | weightedAverageOf3MostSimilar(human_gene_mirtar_targets.csv.gz_text_index_of_Protein families_with_attributes, Protein families) contains (\"bool_mir_target\", 1.0)|    0.00    |   0   |   0.00    
+110   | skipgramsAndBiGrams(Keywords) contains (\"acetylation\", \"alternative\")                           |    0.00    |   0   |   0.00    
+---------------------------------------------------------------------------------------------------------------------------------------------
+Number of trees: 127
