@@ -13,4 +13,4 @@ If you use our code or data, please cite:
 
 
 Includes SparkBeyond feature reports and figures in the paper (including data from external sources), in the reports folder.
-Data folder includes data used for model training, analysis and also some predicted novel miRNA regulated proteins/genes for various species, e.g. arabidopsis thaliana, Zebrafish (e.g. [data/export-preds_30_thale_zebra_candidate_mirgene.csv.zip](https://github.com/LinialLab/microRNA-Protein-Regulation/tree/main/data/predictions)). 
+Data folder includes data used for model training, analysis and also predicted novel miRNA regulated proteins/genes for various species, e.g. [arabidopsis thaliana, Zebrafish](https://github.com/LinialLab/microRNA-Protein-Regulation/tree/main/data/predictions). 
