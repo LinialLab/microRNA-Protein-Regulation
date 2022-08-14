@@ -1,0 +1,87 @@
+
+<!doctype html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: #27292d;
+      color: #fff;
+      font-family: Helvetica, Verdana, Arial, sans-serif;
+    }
+    h2 {
+    	font-weight: 200;
+      color: #5bc0de;
+    }
+    h4 {
+    	font-weight: 200;
+      color: #5bc0de;
+    }
+    pre {
+      word-wrap: break-word;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    	white-space: pre-wrap;
+    	font-family: Helvetica, Verdana, Arial, sans-serif;
+    	font-weight: 100;
+    	font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+	<h2>Insightful Combinations Report for Target bool_mir_target = 0</h2>
+ 	<h4>Overall likelihood:  42.7%</h4>
+
+
+ This report may indicate interesting interplay between variables which may indicate causal relationships.
+ Please consult the literature on Simpson's paradox before making any conclusions.
+ <br/><br/>
+
+ Statement structure: consider two features f and g. A statement is of the form: <br/>
+ When f exists, g changes the average from x to y, but when it does not, g changes the average from w to z. <br/>
+
+<br/>
+ We look at situations where the lifts y/x and z/w are significantly different, meaning that the effect of g on the target varies dependent on f.
+ The Spearman correlation is between the target and the Boolean value of g. When the population that maintains both f and g is
+ characterized by other features as well, these features will appear under the ‘related to segment’ line. Same for the population maintaining
+ both not f and g. Finally, the mentioned number of examples is the minimum number of examples over the four combinations (f, g), (f, not g), (not f, g), (not f, not g). <br/>
+
+	<h4>Trend Flips</h4>
+  <pre>No trend flips found</pre>
+  <h4>Additional Significant Trend Changes</h4>
+  <pre>
+<span style="color:lightgrey">When</span> <span style='color: white' title='Return type: Double
+
+Parameters: (i:Seq[Double])
+
+Cost: 0.05'>max</span>(<span style='color:#3EE77B' title='A Map from key col: Gene_name to values: 3_utr_len
+from table: 3_utr_parsedFeats.csv.gz. Type: MultiLookupContext, cost:1.0'>3_utr_len</span> of <span style='color: #0095F0' title=' Input parameter of type Id, cost:1.0'>Gene names  (primary )</span>)</span> <span style='color: #B9C5E6'>&ge;</span> <span style='color:#C1A6FC' title='391.5'>391.5</span>
+    <span style='color: #0095F0' title=' Input parameter of type Text, cost:1.0'>Features</span></span> <span style='color: #B9C5E6'>contains</span> <span style='color:#C1A6FC' >"variant"</span> slightly increases the likelihood of bool_mir_target = 0 by 6.2% from 0.17 to 0.18 <span style="color:lightgrey">(Spearman 0.04)</span>  
+<span style="color:lightgrey">Otherwise,</span>
+    <span style='color: #0095F0' title=' Input parameter of type Text, cost:1.0'>Features</span></span> <span style='color: #B9C5E6'>contains</span> <span style='color:#C1A6FC' >"variant"</span> decreases the likelihood of bool_mir_target = 0 by 39.3% from 0.48 to 0.29 <span style="color:lightgrey">(Spearman -0.26)</span> 
+    Related to segment: <span style='color: #0095F0' title=' Input parameter of type Text, cost:1.0'>Involvement in disease</span></span> <span style='color: #B9C5E6'>does not contain</span> <span style='color:#C1A6FC' >"disease is"</span>, <span style='color: white' title='Returns the number of words (when split by common delimiters) in the text
+
+Example: numberOfWords(Lorem Ipsum 2) = 3
+
+Return type: Int
+
+Parameters: (s:com.sparkbeyond.runtime.feature.types.SemanticWrapper)
+
+Cost: 1.0'>numberOfWords</span>(<span style='color: #0095F0' title=' Input parameter of type Text, cost:1.0'>Involvement in disease</span>)</span> <span style='color: #B9C5E6'>&lt;</span> <span style='color:#C1A6FC' title='49'>49</span>
+<span style="color:lightgrey">Based on at least 674 examples per combination</span>
+		 <br/>
+<span style="color:lightgrey">When</span> <span style='color: white' title='Returns the number of words (when split by common delimiters) in the text
+
+Example: numberOfWords(Lorem Ipsum 2) = 3
+
+Return type: Int
+
+Parameters: (s:com.sparkbeyond.runtime.feature.types.SemanticWrapper)
+
+Cost: 1.0'>numberOfWords</span>(<span style='color: #0095F0' title=' Input parameter of type Text, cost:1.0'>Involvement in disease</span>)</span> <span style='color: #B9C5E6'>&ge;</span> <span style='color:#C1A6FC' title='49'>49</span>
+    <span style='color: #0095F0' title=' Input parameter of type Text, cost:1.0'>Features</span></span> <span style='color: #B9C5E6'>contains</span> <span style='color:#C1A6FC' >"variant"</span> slightly increases the likelihood of bool_mir_target = 0 by 0.2% from 0.17 to 0.17 <span style="color:lightgrey">(Spearman 0.0)</span>  
+<span style="color:lightgrey">Otherwise,</span>
+    <span style='color: #0095F0' title=' Input parameter of type Text, cost:1.0'>Features</span></span> <span style='color: #B9C5E6'>contains</span> <span style='color:#C1A6FC' >"variant"</span> decreases the likelihood of bool_mir_target = 0 by 37.7% from 0.46 to 0.29 <span style="color:lightgrey">(Spearman -0.23)</span> 
+<span style="color:lightgrey">Based on at least 97 examples per combination</span>
+		 <br/></pre>
+</body>
+</html>
