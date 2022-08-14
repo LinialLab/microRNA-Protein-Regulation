@@ -1,1 +1,10 @@
 SparkBeyond reports
+
+The full, (exhaustive) set of features and their statistics, for each of the uploaded model organisms is publicly available on the github. Specifically, for each organism, the most relevant report is "train_features.html" (https://github.com/LinialLab/microRNA-Protein-Regulation/blob/main/reports/S2-combined%20human%2Bmouse%20reports/train_features.txt) and "test_features.html"  (the latter reports statistics of the features on the test set - these are not used for feature/model selection but are informative for analyzing stability).
+The importance of the features as used by the ML model can be seen in the model report ("model.html", "model.txt"). e.g.  https://github.com/LinialLab/microRNA-Protein-Regulation/blob/main/reports/S2-combined%20human%2Bmouse%20reports/model.txt
+The reports also includes SHAP values for feature importance - 
+Train_SHAP_Feature_Effects.html - https://github.com/LinialLab/microRNA-Protein-Regulation/blob/main/reports/S2-combined%20human%2Bmouse%20reports/Train_SHAP_Feature_Effects.html
+ 
+There are also reports on, e.g. the most important features per input field (clusteringOfBestPerField), and the correlation and clustering of the features over the data points (clusteringOfAllFeatures.pdf), as well as interactions ("features_interactions.html", "insightful_combinations.html"). 
+
+These reports are provided in all the zip files in the github/reports folder (with the same nomenclature). The above links are for a combined human+mouse model.
